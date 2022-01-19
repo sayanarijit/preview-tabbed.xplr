@@ -3,9 +3,7 @@
 Preview paths using suckless [tabbed](https://tools.suckless.org/tabbed/) and
 [nnn preview-tabbed](https://github.com/jarun/nnn/blob/master/plugins/preview-tabbed).
 
-
-Requirements
-------------
+## Requirements
 
 - [nnn](https://github.com/jarun/nnn) with
   [plugins](https://github.com/jarun/nnn/tree/master/plugins#nnn-plugins)
@@ -22,19 +20,21 @@ Requirements
 - mktemp
 - [xdotool](https://github.com/jordansissel/xdotool) (optional, to keep main window focused)
 
-
 TODO: Reduce dependencies as much as possible.
 
-
-Installation
-------------
+## Installation
 
 ### Install manually
 
 - Add the following line in `~/.config/xplr/init.lua`
 
   ```lua
-  package.path = os.getenv("HOME") .. '/.config/xplr/plugins/?/src/init.lua'
+  local home = os.getenv("HOME")
+  package.path = home
+  .. "/.config/xplr/plugins/?/init.lua;"
+  .. home
+  .. "/.config/xplr/plugins/?.lua;"
+  .. package.path
   ```
 
 - Clone the plugin
@@ -49,9 +49,9 @@ Installation
 
   ```lua
   require("preview-tabbed").setup()
-  
+
   -- Or
-  
+
   require("preview-tabbed").setup{
     mode = "action",
     key = "p",
@@ -62,13 +62,12 @@ Installation
   -- Type `:p` to toggle preview mode.
   ```
 
-Troubleshooting
----------------
+## Troubleshooting
 
 1. **Getting `Permission denied`**
 
    Make sure `~/.config/nnn/plugins/*` scripts have execute permission.
-   
+
    ```
    chmod +x ~/.config/nnn/plugins/*
    ```
@@ -76,7 +75,7 @@ Troubleshooting
 2. **xplr gets stuck and it's difficult to debug**
 
    This is the FIFO doing its job.
-   
+
    Run `cat /path/to/fifo` in another window while xplr is stuck/running. Keep
    both running. This will keep clearing the FIFO buffer as you debug.
 
