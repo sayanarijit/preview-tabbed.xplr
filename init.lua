@@ -23,7 +23,6 @@ local function parse_args(args)
 end
 
 local function setup(args)
-
   args = parse_args(args)
 
   local xplr = xplr
@@ -31,15 +30,16 @@ local function setup(args)
   local enabled = false
   local messages = {}
 
-  os.execute("[ ! -p '" .. args.fifo_path .."' ] && mkfifo '" .. args.fifo_path .. "'")
-
   xplr.fn.custom.preview_tabbed_toggle = function(app)
+    os.execute(
+      "[ ! -p '" .. args.fifo_path .. "' ] && mkfifo '" .. args.fifo_path .. "'"
+    )
 
     if enabled then
       enabled = false
       messages = { "StopFifo" }
     else
-      os.execute("NNN_FIFO='" .. args.fifo_path .. "' '".. args.previewer .. "' & ")
+      os.execute("NNN_FIFO='" .. args.fifo_path .. "' '" .. args.previewer .. "' & ")
       enabled = true
       messages = {
         { StartFifo = args.fifo_path },
