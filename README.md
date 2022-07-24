@@ -20,7 +20,7 @@ Preview paths using suckless [tabbed](https://tools.suckless.org/tabbed/) and
 - mktemp
 - [xdotool](https://github.com/jordansissel/xdotool) (optional, to keep main window focused)
 
-TODO: Reduce dependencies as much as possible.
+TODO: Reduce dependencies as much as possible. ([WIP](https://github.com/sayanarijit/previuwu))
 
 ## Installation
 
