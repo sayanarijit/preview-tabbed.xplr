@@ -76,7 +76,7 @@ TODO: Reduce dependencies as much as possible. ([WIP](https://github.com/sayanar
 
    This is the FIFO doing its job.
 
-   Run `cat /path/to/fifo` in another window while xplr is stuck/running. Keep
+   Run `cat /tmp/xplr.fifo` in another window while xplr is stuck/running. Keep
    both running. This will keep clearing the FIFO buffer as you debug.
 
 3. **Window focus gets lost in XMonad**
