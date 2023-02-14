@@ -14,7 +14,7 @@ local function parse_args(args)
   end
 
   if args.key == nil then
-    args.key = "p"
+    args.key = "P"
   end
 
   if args.previewer == nil then

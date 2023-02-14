@@ -54,7 +54,7 @@ TODO: Reduce dependencies as much as possible. ([WIP](https://github.com/sayanar
 
   require("preview-tabbed").setup{
     mode = "action",
-    key = "p",
+    key = "P",
     fifo_path = "/tmp/xplr.fifo",
     previewer = os.getenv("HOME") .. "/.config/nnn/plugins/preview-tabbed",
   }
