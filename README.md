@@ -1,5 +1,7 @@
 ![preview gif](https://user-images.githubusercontent.com/11632726/120893313-40a1af80-c630-11eb-800d-815ca3aadb5c.gif)
 
+> **WARGING:** This plugin doesn't currently work on wayland.
+
 Preview paths using suckless [tabbed](https://tools.suckless.org/tabbed/) and
 [nnn preview-tabbed](https://github.com/jarun/nnn/blob/master/plugins/preview-tabbed).
 
