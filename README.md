@@ -6,7 +6,7 @@ Preview paths using suckless [tabbed](https://tools.suckless.org/tabbed/) and
 ## Requirements
 
 - [nnn](https://github.com/jarun/nnn) with
-  [plugins](https://github.com/jarun/nnn/tree/master/plugins#nnn-plugins)
+  [plugins](https://github.com/jarun/nnn/tree/master/plugins#installation)
   (specifically [preview-tabbed](https://github.com/jarun/nnn/blob/master/plugins/preview-tabbed)
   and
   [nuke](https://github.com/jarun/nnn/blob/master/plugins/nuke))
